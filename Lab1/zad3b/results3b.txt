@@ -1,0 +1,302 @@
+main_static:
+O0:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.080000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.260000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.650000	            0.010000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.130000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.430000	            0.010000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            0.980000	            0.000000	            0.000000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.420000	            0.010000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.420000	            0.000000	            0.000000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.150000	            0.000000	            0.000000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.530000	            0.000000	            0.010000
+Alternating counting and removing on medium files: 	            0.790000	            0.000000	            0.010000
+ Alternating counting and removing on large files: 	            2.670000	            0.000000	            0.010000
+
+O2:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.080000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.290000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.590000	            0.000000	            0.010000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.120000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.410000	            0.000000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            0.950000	            0.000000	            0.010000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.380000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.400000	            0.000000	            0.010000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.320000	            0.000000	            0.010000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.640000	            0.000000	            0.010000
+Alternating counting and removing on medium files: 	            0.980000	            0.000000	            0.010000
+ Alternating counting and removing on large files: 	            3.150000	            0.000000	            0.010000
+
+O3:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.090000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.330000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.680000	            0.010000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.170000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.470000	            0.010000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            1.110000	            0.010000	            0.000000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.440000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.400000	            0.010000	            0.000000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.300000	            0.000000	            0.000000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.550000	            0.000000	            0.010000
+Alternating counting and removing on medium files: 	            0.830000	            0.000000	            0.010000
+ Alternating counting and removing on large files: 	            2.790000	            0.000000	            0.010000
+
+Os:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.100000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.290000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.620000	            0.010000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.130000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.410000	            0.010000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            0.990000	            0.010000	            0.000000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.400000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.370000	            0.000000	            0.000000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.220000	            0.010000	            0.000000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.550000	            0.000000	            0.000000
+Alternating counting and removing on medium files: 	            0.830000	            0.010000	            0.010000
+ Alternating counting and removing on large files: 	            2.720000	            0.000000	            0.000000
+
+main_shared:
+O0:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.100000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.270000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.610000	            0.000000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.120000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.420000	            0.000000	            0.010000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            1.000000	            0.000000	            0.010000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.390000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.370000	            0.000000	            0.000000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.580000	            0.000000	            0.010000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.630000	            0.000000	            0.010000
+Alternating counting and removing on medium files: 	            0.960000	            0.000000	            0.010000
+ Alternating counting and removing on large files: 	            3.010000	            0.000000	            0.010000
+
+O2:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.120000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.310000	            0.010000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.720000	            0.000000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.140000	            0.010000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.490000	            0.000000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            1.120000	            0.010000	            0.000000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.420000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.440000	            0.010000	            0.000000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.310000	            0.010000	            0.000000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.550000	            0.000000	            0.000000
+Alternating counting and removing on medium files: 	            0.870000	            0.010000	            0.000000
+ Alternating counting and removing on large files: 	            2.820000	            0.010000	            0.000000
+
+O3:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.110000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.280000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.600000	            0.010000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.130000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.420000	            0.000000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            1.010000	            0.010000	            0.010000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.400000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.410000	            0.000000	            0.000000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.320000	            0.000000	            0.010000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.560000	            0.000000	            0.010000
+Alternating counting and removing on medium files: 	            0.850000	            0.000000	            0.000000
+ Alternating counting and removing on large files: 	            2.770000	            0.000000	            0.010000
+
+Os:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.080000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.310000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.630000	            0.010000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.130000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.420000	            0.000000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            1.040000	            0.000000	            0.010000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.400000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.430000	            0.000000	            0.010000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.270000	            0.000000	            0.000000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.560000	            0.000000	            0.010000
+Alternating counting and removing on medium files: 	            0.840000	            0.000000	            0.010000
+ Alternating counting and removing on large files: 	            2.810000	            0.000000	            0.010000
+
+main_dll:
+O0:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.080000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.310000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.630000	            0.010000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.130000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.420000	            0.010000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            1.030000	            0.010000	            0.000000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.410000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.380000	            0.000000	            0.000000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.320000	            0.000000	            0.010000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.560000	            0.000000	            0.000000
+Alternating counting and removing on medium files: 	            0.850000	            0.010000	            0.010000
+ Alternating counting and removing on large files: 	            2.790000	            0.000000	            0.000000
+
+O2:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.110000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.300000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.600000	            0.010000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.160000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.420000	            0.000000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            1.010000	            0.000000	            0.010000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.390000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.400000	            0.000000	            0.000000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.330000	            0.000000	            0.010000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.560000	            0.000000	            0.010000
+Alternating counting and removing on medium files: 	            0.840000	            0.000000	            0.010000
+ Alternating counting and removing on large files: 	            2.790000	            0.000000	            0.010000
+
+O3:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.080000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.270000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.610000	            0.010000	            0.000000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.140000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.420000	            0.010000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            0.990000	            0.000000	            0.000000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.400000	            0.000000	            0.000000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.420000	            0.000000	            0.010000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.280000	            0.000000	            0.010000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.560000	            0.000000	            0.010000
+Alternating counting and removing on medium files: 	            0.840000	            0.000000	            0.010000
+ Alternating counting and removing on large files: 	            2.810000	            0.000000	            0.000000
+
+Os:
+                                type of operation: 	        real time[s]	        user time[s]	      system time[s]
+
+              Counted small number of small files: 	            0.080000	            0.000000	            0.000000
+              Removed small number of small files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of small files: 	            0.270000	            0.000000	            0.000000
+             Removed medium number of small files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of small files: 	            0.630000	            0.000000	            0.010000
+              Removed large number of small files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.120000	            0.000000	            0.000000
+             Removed small number of medium files: 	            0.000000	            0.000000	            0.000000
+            Counted medium number of medium files: 	            0.450000	            0.000000	            0.000000
+            Removed medium number of medium files: 	            0.000000	            0.000000	            0.000000
+             Counted large number of medium files: 	            0.990000	            0.000000	            0.000000
+             Removed large number of medium files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            0.420000	            0.010000	            0.010000
+              Removed small number of large files: 	            0.000000	            0.000000	            0.000000
+             Counted medium number of large files: 	            1.400000	            0.000000	            0.000000
+             Removed medium number of large files: 	            0.000000	            0.000000	            0.000000
+              Counted large number of large files: 	            3.260000	            0.000000	            0.000000
+              Removed large number of large files: 	            0.000000	            0.000000	            0.000000
+ Alternating counting and removing on small files: 	            0.560000	            0.000000	            0.010000
+Alternating counting and removing on medium files: 	            0.880000	            0.010000	            0.000000
+ Alternating counting and removing on large files: 	            2.780000	            0.000000	            0.010000

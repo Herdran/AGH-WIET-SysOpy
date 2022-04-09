@@ -1,0 +1,16 @@
+Lib small file size measurements:
+Character 'a'  appears 1450 times in 110 lines in a given file
+real time: 0.000000s user time: 0.000000s system time: 0.000000s
+
+Lib big file size measurements:
+Character 'a'  appears 4350 times in 330 lines in a given file
+real time: 0.000000s user time: 0.000000s system time: 0.000000s
+
+
+Sys small file size measurements:
+Character 'a'  appears 1450 times in 110 lines in a given file
+real time: 0.000000s user time: 0.000000s system time: 0.000000s
+
+Sys big file size measurements:
+Character 'a'  appears 4350 times in 330 lines in a given file
+real time: 0.000000s user time: 0.000000s system time: 0.000000s

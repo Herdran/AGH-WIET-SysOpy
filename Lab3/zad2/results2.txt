@@ -1,0 +1,17 @@
+tezd:
+3.207446
+real time: 0.010000s user time: 0.000000s system time: 0.000000s
+3.334926
+real time: 0.020000s user time: 0.000000s system time: 0.000000s
+3.483828
+real time: 0.030000s user time: 0.000000s system time: 0.000000s
+3.501862
+real time: 0.090000s user time: 0.010000s system time: 0.000000s
+3.316911
+real time: 0.140000s user time: 0.000000s system time: 0.010000s
+3.715355
+real time: 0.250000s user time: 0.030000s system time: 0.000000s
+3.230982
+real time: 0.320000s user time: 0.000000s system time: 0.040000s
+3.186518
+real time: 0.680000s user time: 0.000000s system time: 0.090000s

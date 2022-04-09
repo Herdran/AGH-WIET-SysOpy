@@ -1,0 +1,12 @@
+Lib small file size measurements:
+real time: 0.000000s user time: 0.000000s system time: 0.000000s
+
+Lib big file size measurements:
+real time: 0.000000s user time: 0.000000s system time: 0.000000s
+
+
+Sys small file size measurements:
+real time: 0.010000s user time: 0.000000s system time: 0.000000s
+
+Sys big file size measurements:
+real time: 0.010000s user time: 0.000000s system time: 0.000000s
