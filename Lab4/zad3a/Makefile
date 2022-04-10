@@ -10,18 +10,23 @@ sender:
 clean:
 	rm -f *.o
 
-test_catcher:
+test_kill:
 	make catcher
+	make sender
 	./catcher.o KILL
-	./catcher.o QUEUE
-	./catcher.o SIGRT
+	./sender.o 0 1000 KILL
 	make clean
 
-test_sender:
+test_queue:
+	make catcher
 	make sender
-	./sender.o 0 1000 KILL
+	./catcher.o QUEUE
 	./sender.o 0 1000 QUEUE
+	make clean
+
+test_sigrt:
+	make catcher
+	make sender
+	./catcher.o SIGRT
 	./sender.o 0 1000 SIGRT
 	make clean
-
-

@@ -1,0 +1,4 @@
+"Ignore" "mask" oraz "handler" są obsługiwane przez proces macierzysty i potomny, dla "pending" proces macierzysty widzi sygnał maskowany, potomek nie.
+
+
+"Ignore" i "mask" są obsługiwane dla programu uruchamianego przez exec, dla "pending" sygnał jest widoczny w programie uruchomionym przez exec.
