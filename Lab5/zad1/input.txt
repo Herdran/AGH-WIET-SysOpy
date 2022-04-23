@@ -1,0 +1,7 @@
+commands0 = cat /etc/passwd | echo hello
+commands1 = ls | grep '^a' | echo world
+commands2 = echo 1 | echo 2
+commands3 = cat input.txt | grep 'a'
+commands4 = cat main.c | grep fork
+commands5 = wc -l
+commands2
