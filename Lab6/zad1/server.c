@@ -1,7 +1,6 @@
 #include "common.h"
 
 key_t clients_queues[MAX_CLIENTS];
-int clients_available[MAX_CLIENTS];
 int first_free_id = 0;
 int server_queue;
 
@@ -17,22 +16,22 @@ void log_msg(msgbuf *msg) {
                 fprintf(log_fd, "INIT received but client limit reached\n");
             }
             else{
-                fprintf(log_fd, "INIT of client with id %d\n", msg->client.client_id);
+                fprintf(log_fd, "INIT of client with ID %d\n", msg->client.client_id);
             }
             break;
         case LIST:
-            fprintf(log_fd, "LIST requested by client with id %d\n", msg->client.client_id);
+            fprintf(log_fd, "LIST requested by client with ID %d\n", msg->client.client_id);
             break;
         case TO_ONE:
-            fprintf(log_fd, "2ALL from client with id %d\n", msg->client.client_id);
+            fprintf(log_fd, "2ALL from client with ID %d\n", msg->client.client_id);
             fprintf(log_fd, "Message sent: %s\n" , msg->mtext);
             break;
         case TO_ALL:
-            fprintf(log_fd, "2ONE from client with id %d to client with id %d\n", msg->client.client_id, msg->client.to_one_client_id);
+            fprintf(log_fd, "2ONE from client with ID %d to client with ID %d\n", msg->client.client_id, msg->client.to_one_client_id);
             fprintf(log_fd, "Message sent: %s\n" , msg->mtext);
             break;
         case STOP:
-            fprintf(log_fd, "STOP of client with id %d\n", msg->client.client_id);
+            fprintf(log_fd, "STOP of client with ID %d\n", msg->client.client_id);
             break;
     }
 
@@ -60,7 +59,6 @@ void init_handler(msgbuf* msg) {
         int client_queue_id = msgget(msg->client.queue_key, 0);
 
         clients_queues[first_free_id] = msg->client.queue_key;
-        clients_available[first_free_id] = 1;
         if (first_free_id < MAX_CLIENTS - 1){
             first_free_id++;
         }
@@ -76,7 +74,7 @@ void list_handler(int client_id) {
 
     for(int i = 0; i < MAX_CLIENTS; i++) {
         if(clients_queues[i] != -1) {
-            sprintf(msg->mtext + strlen(msg->mtext), "ID %d, client %s\n", i , clients_available[i] ? "available" : "not available");
+            sprintf(msg->mtext + strlen(msg->mtext), "ID %d, client active\n", i);
         }
     }
 
@@ -108,7 +106,6 @@ void to_all_handler(msgbuf* msg) {
 void stop_handler(int client_id) {
     printf("STOP received\n");
     clients_queues[client_id] = -1;
-    clients_available[client_id] = 0;
     first_free_id = client_id;
 }
 
