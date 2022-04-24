@@ -11,13 +11,10 @@ int init(){
     time_t t = time(NULL);
     msg->tm = *localtime(&t);
     msg->mtype = INIT;
-    msg->client.queue_key = queue_key;
+    msg->queue_key = queue_key;
     msgsnd(server_queue_id, msg, MSG_SIZE, 0);
-
-    msgbuf* msg_rcv = malloc(sizeof(msgbuf));
-    msgrcv(queue_id, msg_rcv, MSG_SIZE, 0, 0);
-
-    int client_id = msg_rcv->client.client_id;
+    msgrcv(queue_id, msg, MSG_SIZE, 0, 0);
+    int client_id = msg->client_id;
     if (client_id == -1){
         printf("Max amount of clients has been reached, exiting\n");
         exit(0);
@@ -28,15 +25,13 @@ int init(){
 
 void list_command() {
     msgbuf* msg = malloc(sizeof(msgbuf));
-    msgbuf* msg_rcv = malloc(sizeof(msgbuf));
     time_t t = time(NULL);
     msg->tm = *localtime(&t);
     msg->mtype = LIST;
-    msg->client.client_id = client_id;
-
+    msg->client_id = client_id;
     msgsnd(server_queue_id, msg, MSG_SIZE, 0);
-    msgrcv(queue_id, msg_rcv, MSG_SIZE, 0, 0);
-    printf("%s\n", msg_rcv->mtext);
+    msgrcv(queue_id, msg, MSG_SIZE, 0, 0);
+    printf("%s\n", msg->mtext);
 }
 
 
@@ -46,8 +41,8 @@ void to_one_command(int other_client_id, char* message) {
     msg->tm = *localtime(&t);
     msg->mtype = TO_ONE;
     strcpy(msg->mtext, message);
-    msg->client.client_id = client_id;
-    msg->client.to_one_client_id = other_client_id;
+    msg->client_id = client_id;
+    msg->other_client_id = other_client_id;
     msgsnd(server_queue_id, msg, MSG_SIZE, 0);
 }
 
@@ -58,7 +53,7 @@ void to_all_command(char* message) {
     msg->tm = *localtime(&t);
     msg->mtype = TO_ALL;
     strcpy(msg->mtext, message);
-    msg->client.client_id = client_id;
+    msg->client_id = client_id;
     msgsnd(server_queue_id, msg, MSG_SIZE, 0);
 }
 
@@ -68,7 +63,7 @@ void stop() {
     time_t t = time(NULL);
     msg->tm = *localtime(&t);
     msg->mtype = STOP;
-    msg->client.client_id = client_id;
+    msg->client_id = client_id;
 
     msgsnd(server_queue_id, msg, MSG_SIZE, 0);
     msgctl(queue_id, IPC_RMID, NULL);
@@ -88,7 +83,7 @@ void check_server_message() {
         else{
             struct tm tm = msg_rcv->tm;
             printf("Message from user with id %d sent on %d-%02d-%02d %02d:%02d:%02d:\n%s\n",
-                   msg_rcv->client.client_id, tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec, msg_rcv->mtext);
+                   msg_rcv->client_id, tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec, msg_rcv->mtext);
         }
     }
 }
@@ -96,14 +91,10 @@ void check_server_message() {
 
 int main() {
     srand(time(NULL));
-
     queue_key = ftok(PATH_TO_GENERATE_KEY, rand() % 255 + 1);
-
     queue_id = msgget(queue_key, IPC_CREAT | 0666);
-
     key_t server_key = ftok(PATH_TO_GENERATE_KEY, SERVER_KEY_ID);
     server_queue_id = msgget(server_key, 0);
-
     client_id = init();
 
     printf("Queue key: %d\n", queue_key);
@@ -116,6 +107,7 @@ int main() {
     char* command = NULL;
     size_t len = 0;
     ssize_t read = 0;
+
     while(1) {
         printf("Enter the command: ");
         read = getline(&command, &len, stdin);

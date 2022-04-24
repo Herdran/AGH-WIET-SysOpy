@@ -12,26 +12,26 @@ void log_msg(msgbuf *msg) {
 
     switch(msg->mtype) {
         case INIT:
-            if (msg->client.client_id == -1){
+            if (msg->client_id == -1){
                 fprintf(log_fd, "INIT received but client limit reached\n");
             }
             else{
-                fprintf(log_fd, "INIT of client with ID %d\n", msg->client.client_id);
+                fprintf(log_fd, "INIT of client with ID %d\n", msg->client_id);
             }
             break;
         case LIST:
-            fprintf(log_fd, "LIST requested by client with ID %d\n", msg->client.client_id);
+            fprintf(log_fd, "LIST requested by client with ID %d\n", msg->client_id);
             break;
         case TO_ONE:
-            fprintf(log_fd, "2ALL from client with ID %d\n", msg->client.client_id);
+            fprintf(log_fd, "2ONE from client with ID %d to client with ID %d\n", msg->client_id, msg->other_client_id);
             fprintf(log_fd, "Message sent: %s\n" , msg->mtext);
             break;
         case TO_ALL:
-            fprintf(log_fd, "2ONE from client with ID %d to client with ID %d\n", msg->client.client_id, msg->client.to_one_client_id);
+            fprintf(log_fd, "2ALL from client with ID %d\n", msg->client_id);
             fprintf(log_fd, "Message sent: %s\n" , msg->mtext);
             break;
         case STOP:
-            fprintf(log_fd, "STOP of client with ID %d\n", msg->client.client_id);
+            fprintf(log_fd, "STOP of client with ID %d\n", msg->client_id);
             break;
     }
 
@@ -47,24 +47,19 @@ void init_handler(msgbuf* msg) {
     }
     if (first_free_id == MAX_CLIENTS - 1 && clients_queues[first_free_id] != -1){
         printf("INIT received but client limit reached\n");
-        msg->client.client_id = -1;
-        int client_queue_id = msgget(msg->client.queue_key, 0);
-        msgsnd(client_queue_id, msg, MSG_SIZE, 0);
-        log_msg(msg);
+        msg->client_id = -1;
     }
     else{
         printf("INIT received\n");
-        msg->client.client_id = first_free_id;
-
-        int client_queue_id = msgget(msg->client.queue_key, 0);
-
-        clients_queues[first_free_id] = msg->client.queue_key;
+        msg->client_id = first_free_id;
+        clients_queues[first_free_id] = msg->queue_key;
         if (first_free_id < MAX_CLIENTS - 1){
             first_free_id++;
         }
-        msgsnd(client_queue_id, msg, MSG_SIZE, 0);
-        log_msg(msg);
     }
+    int client_queue_id = msgget(msg->queue_key, 0);
+    msgsnd(client_queue_id, msg, MSG_SIZE, 0);
+    log_msg(msg);
 }
 
 void list_handler(int client_id) {
@@ -77,17 +72,15 @@ void list_handler(int client_id) {
             sprintf(msg->mtext + strlen(msg->mtext), "ID %d, client active\n", i);
         }
     }
-
-    int client_queue_id = msgget(clients_queues[client_id], 0);
-
     msg->mtype = LIST;
+    int client_queue_id = msgget(clients_queues[client_id], 0);
     msgsnd(client_queue_id, msg, MSG_SIZE, 0);
 }
 
 
 void to_one_handler(msgbuf* msg) {
     printf("2ONE received\n");
-    int other_client_queue_id = msgget(clients_queues[msg->client.to_one_client_id], 0);
+    int other_client_queue_id = msgget(clients_queues[msg->other_client_id], 0);
     msgsnd(other_client_queue_id, msg, MSG_SIZE, 0);
 }
 
@@ -95,7 +88,7 @@ void to_one_handler(msgbuf* msg) {
 void to_all_handler(msgbuf* msg) {
     printf("2ALL received\n");
     for (int i = 0; i < MAX_CLIENTS; i++){
-        if (i != msg->client.client_id && clients_queues[i] != -1){
+        if (i != msg->client_id && clients_queues[i] != -1){
             int other_client_queue_id = msgget(clients_queues[i], 0);
             msgsnd(other_client_queue_id, msg, MSG_SIZE, 0);
         }
@@ -106,7 +99,9 @@ void to_all_handler(msgbuf* msg) {
 void stop_handler(int client_id) {
     printf("STOP received\n");
     clients_queues[client_id] = -1;
-    first_free_id = client_id;
+    if (client_id < first_free_id){
+        first_free_id = client_id;
+    }
 }
 
 
@@ -130,13 +125,12 @@ int main() {
     }
     key_t queue_key = ftok(PATH_TO_GENERATE_KEY, SERVER_KEY_ID);
     server_queue = msgget(queue_key, IPC_CREAT | 0666);
-
+    signal(SIGINT, quit_handler);
+    msgbuf* msg = malloc(sizeof(msgbuf));
+    printf("SERVER START\n");
     printf("Server queue key: %d\n", queue_key);
     printf("Server queue ID: %d\n", server_queue);
 
-    signal(SIGINT, quit_handler);
-
-    msgbuf* msg = malloc(sizeof(msgbuf));
     while(1) {
         msgrcv(server_queue, msg, MSG_SIZE, -6, 0);
 
@@ -145,7 +139,7 @@ int main() {
                 init_handler(msg);
                 break;
             case LIST:
-                list_handler(msg->client.client_id);
+                list_handler(msg->client_id);
                 log_msg(msg);
                 break;
             case TO_ONE:
@@ -157,7 +151,7 @@ int main() {
                 log_msg(msg);
                 break;
             case STOP:
-                stop_handler(msg->client.client_id);
+                stop_handler(msg->client_id);
                 log_msg(msg);
                 break;
             default:
